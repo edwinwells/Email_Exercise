@@ -47,7 +47,7 @@ template = %(
   </html>
 )
 
-name = "Ruby Monstas"
+name = "Edwin"
 
 
 emails = [
