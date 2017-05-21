@@ -39,9 +39,10 @@ template = %(
     <body>
       <h1>Messages for <%= name %></h1>
       <ul>
-        <% emails.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+        <%= emails %>
+        # <% emails.each do |message| %>
+        #   <li><%= message %></li>
+        # <% end %>
       </ul>
     </body>
   </html>
@@ -55,6 +56,7 @@ emails = [
   Email.new("Keep on coding! :)", date: "2014-12-01", from: "Dajana"),
   Email.new("Re: Homework this week", date: "2014-12-02", from: "Ariane")
 ]
+
 mailbox = Mailbox.new("Ruby Study Group", emails)
 
 html = ERB.new(template).result(binding)
